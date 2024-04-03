@@ -6,7 +6,10 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(children: [Text("Welcome Page")],),
+      body: SafeArea(child: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(children: [Text("Welcome Page")],),
+      )),
     );
   }
 }
