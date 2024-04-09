@@ -1,7 +1,9 @@
 import 'package:book/Components/PrimaryButton.dart';
+import 'package:book/Pages/HomePage/HomePage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -71,7 +73,9 @@ class WelcomePage extends StatelessWidget {
             padding: const EdgeInsets.all(10),
             child: PrimaryButton(
               btnName: "CONTINOUE", 
-              onTap: (){},
+              onTap: (){
+                Get.offAll(HomePage());
+              },
               ),
           )
         ],)
