@@ -1,3 +1,4 @@
+import 'package:book/Components/BookCard.dart';
 import 'package:book/Config/Colors.dart';
 import 'package:book/Models/Data.dart';
 import 'package:book/Pages/HomePage/Widget/AppBar.dart';
@@ -18,14 +19,14 @@ class HomePage extends StatelessWidget {
         Container(
           padding: EdgeInsets.all(10),
           color: Theme.of(context).colorScheme.primary,
-          height: 500,
+          //height: 400,
           child: Expanded(
             child: Row(
               children: [
                 Expanded(
                   child: Column(
                     children: [
-                      SizedBox(height: 50),
+                      SizedBox(height: 30),
                       HomeAppBar(),
                       SizedBox(height: 50),
                       Row(
@@ -73,7 +74,42 @@ class HomePage extends StatelessWidget {
                 ),
               ],
                     ),
-          ),)
+          ),),
+          
+          SizedBox(height: 10),
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              children: [
+                Row(children: [
+                  Text("Trending", style: Theme.of(context).textTheme.labelMedium,),
+
+                  
+                ],),
+                SizedBox(height: 10),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      BookCard(),
+                      BookCard(),
+                      BookCard(),
+                      BookCard(),
+                      BookCard(),
+                      BookCard(),
+                      BookCard(),
+                      BookCard(),
+                      BookCard(),
+                      BookCard(),
+                      BookCard(),
+                      BookCard(),
+                      BookCard(),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
       ],)
 
     );
